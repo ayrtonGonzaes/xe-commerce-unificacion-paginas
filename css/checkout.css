@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px;
+}
+
+
+
+#confirmarCompraBtn{
+    height: 40px;
+    min-width: 130px;
+    width: 15%;
+    padding: 5px 25px;
+    background: #fff;
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.063em;
+    text-align: center;
+    border: 1px solid #c6c6c6;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+#confirmarCompraBtn::after{
+    content: "";
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    bottom: 3px;
+    right: 5px;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+#confirmarCompraBtn:hover{
+    color: #545454;
+}
+
+#confirmarCompraBtn:hover::after{
+    border: 1px solid #545454;
+}
+
+#confirmarCompraBtn:focus{
+    border: 1px solid #000;
+}
+/*
+#mensajeExito {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+*/
+#mensajeExito{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    display: none;
+    text-align: center;
+}
+/* ... (otros estilos si es necesario) ... */
